@@ -61,11 +61,7 @@ export default function Home() {
     <div className="relative bg-gray-900 text-gray-200">
       <Head>
         <title>CreateCubic - Agência de Lançamentos</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Kanit:wght@400;500;600;700&family=Lekton:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
+        <meta name="description" content="Bem-vindo à CreateCubic, sua agência de lançamentos." />
       </Head>
 
       {/* Header */}
@@ -78,7 +74,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <img
+            <Image
               src="/images/logo.png"
               alt="CreateCubic Logo"
               className="h-10 w-auto"
@@ -174,15 +170,15 @@ export default function Home() {
   {/* Logos das Ferramentas em Movimento */}
   <div className="overflow-hidden mt-[-2rem] mb-8"> {/* Ajuste para posicionar mais para cima */}
     <div className="flex items-center space-x-16 animate-marquee whitespace-nowrap py-4">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="h-12 w-auto"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" className="h-12 w-auto"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Adobe" className="h-12 w-auto" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" alt="Shopify" className="h-12 w-auto" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg" alt="Facebook" className="h-12 w-auto" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg" alt="Instagram" className="h-12 w-auto" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" alt="Node.js" className="h-12 w-auto" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" className="h-12 w-auto" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" alt="JavaScript" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="h-12 w-auto"/>
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" className="h-12 w-auto"/>
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Adobe" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" alt="Shopify" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg" alt="Facebook" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg" alt="Instagram" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" alt="Node.js" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" className="h-12 w-auto" />
+      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" alt="JavaScript" className="h-12 w-auto" />
     </div>
   </div>
 
@@ -289,7 +285,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0, x: 0 }}
           transition={{ type: "spring", stiffness: 120, damping: 20, delay: index * 0.1 }}
         >
-          <img
+          <Image
             src={`/images/${project.image}`}
             alt={project.title}
             className="w-full h-32 object-cover rounded mb-4"
@@ -347,7 +343,7 @@ export default function Home() {
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <img
+            <Image
               src={solution.icon}
               alt={`${solution.title} Icon`}
               className="w-20 h-20"
@@ -378,7 +374,7 @@ export default function Home() {
       viewport={{ once: true }} 
       transition={{ duration: 1 }}
     >
-      <img 
+      <Image
         src="/images/bruno-briote.jpg" 
         alt="Bruno Briote" 
         className="w-48 h-60 object-cover rounded-3xl shadow-lg mb-6" 
@@ -405,7 +401,7 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <p className="text-xl italic text-gray-300 mb-6">
-          "A CreateCubic não apenas entregou um produto, mas nos ajudou a redefinir nosso negócio no mundo digital."
+          A CreateCubic não apenas entregou um produto, mas nos ajudou a redefinir nosso negócio no mundo digital.
         </p>
         <h5 className="text-3xl font-kanit text-indigo-400 mb-1">Lucas Ferreira</h5>
         <span className="text-gray-400 text-lg">CEO da TechNova</span>
@@ -420,7 +416,7 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <p className="text-xl italic text-gray-300 mb-6">
-          "Trabalhar com a CreateCubic foi uma experiência transformadora. A criatividade e profissionalismo da equipe são incomparáveis."
+          Trabalhar com a CreateCubic foi uma experiência transformadora. A criatividade e profissionalismo da equipe são incomparáveis.
         </p>
         <h5 className="text-3xl font-kanit text-indigo-400 mb-1">Sofia Mendes</h5>
         <span className="text-gray-400 text-lg">Fundadora da Artify</span>
