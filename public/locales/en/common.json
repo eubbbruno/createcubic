@@ -1,0 +1,58 @@
+{
+    "pageTitle": "CreateCubic - Launch Agency",
+    "pageDescription": "Welcome to CreateCubic, your launch agency.",
+    "logoAlt": "CreateCubic Logo",
+    "nav": {
+      "home": "HOME",
+      "about": "ABOUT",
+      "projects": "PROJECTS",
+      "solutions": "SOLUTIONS",
+      "team": "TEAM",
+      "blog": "BLOG",
+      "contact": "CONTACT"
+    },
+    "hero": {
+      "title": "Innovation that Transforms",
+      "description": "We develop digital solutions that empower ideas and propel businesses to infinity.",
+      "exploreButton": "Explore Our Projects",
+      "contactButton": "Contact Us"
+    },
+    "solutions": [
+      {
+        "title": "Websites & E-commerce",
+        "description": "We create customized platforms for online businesses."
+      },
+      {
+        "title": "Automated Dropshipping",
+        "description": "Complete automation for your dropshipping business."
+      },
+      {
+        "title": "Paid Traffic Management",
+        "description": "Campaign optimization for exceptional results."
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "Development of innovative mobile applications."
+      },
+      {
+        "title": "Custom SaaS",
+        "description": "SaaS solutions tailored to your needs."
+      },
+      {
+        "title": "Digital Content",
+        "description": "Creation and management of strategic digital content."
+      },
+      {
+        "title": "Affiliate Marketing",
+        "description": "Effective affiliate marketing strategies."
+      },
+      {
+        "title": "Blockchain & Crypto",
+        "description": "Blockchain and cryptocurrency-based projects."
+      }
+    ],
+    "footer": {
+      "slogan": "Creating the future, one cube at a time.",
+      "copyright": "© {{year}} CreateCubic. All rights reserved."
+    }
+  }

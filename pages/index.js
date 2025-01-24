@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import FloatingCubesBackground from '../components/FloatingCubes';
 import City3D from '@/components/City3D';
 import CustomCursor from '@/components/CustomCursor';
@@ -12,56 +14,19 @@ const MotionBox = motion(Box);
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation('common');
 
   // Lista de Soluções
-  const solutions = [
-    {
-      title: "Websites & E-commerces",
-      description: "Criamos plataformas personalizadas para negócios online.",
-      icon: "/icons/ecommerce.png",
-    },
-    {
-      title: "Dropshipping Automatizado",
-      description: "Automatização completa para seu negócio de dropshipping.",
-      icon: "/icons/dropshipping.png",
-    },
-    {
-      title: "Gestão de Tráfego Pago",
-      description: "Otimização de campanhas para resultados excepcionais.",
-      icon: "/icons/ads.png",
-    },
-    {
-      title: "Apps Mobile",
-      description: "Desenvolvimento de aplicativos móveis inovadores.",
-      icon: "/icons/mobileapps.png",
-    },
-    {
-      title: "SaaS Personalizado",
-      description: "Soluções SaaS adaptadas às suas necessidades.",
-      icon: "/icons/saas.png",
-    },
-    {
-      title: "Conteúdo Digital",
-      description: "Criação e gestão de conteúdo digital estratégico.",
-      icon: "/icons/socialmedia.png",
-    },
-    {
-      title: "Marketing de Afiliados",
-      description: "Estratégias eficazes de marketing de afiliados.",
-      icon: "/icons/affiliate.png",
-    },
-    {
-      title: "Blockchain & Cripto",
-      description: "Projetos baseados em blockchain e criptomoedas.",
-      icon: "/icons/blockchain.png",
-    },
-  ];
+  const solutions = t('solutions', { returnObjects: true }) || [];
+
+  // Ensure solutions is always an array
+  const solutionsArray = Array.isArray(solutions) ? solutions : [];
 
   return (
     <div className="relative bg-gray-900 text-gray-200">
       <Head>
-        <title>CreateCubic - Agência de Lançamentos</title>
-        <meta name="description" content="Bem-vindo à CreateCubic, sua agência de lançamentos." />
+        <title>{t('pageTitle')}</title>
+        <meta name="description" content={t('pageDescription')} />
       </Head>
 
       {/* Header */}
@@ -76,20 +41,20 @@ export default function Home() {
           >
             <Image
               src="/images/logo.png"
-              alt="CreateCubic Logo"
+              alt={t('logoAlt')}
               className="h-10 w-auto"
             />
           </motion.div>
 
           {/* Navegação */}
           <nav className="hidden md:flex space-x-8 text-lg font-semibold font-dosis uppercase">
-            <a href="#inicio" className="nav-link">INÍCIO</a>
-            <a href="#sobre" className="nav-link">SOBRE</a>
-            <a href="#projetos" className="nav-link">PROJETOS</a>
-            <a href="#solucoes" className="nav-link">SOLUÇÕES</a>
-            <a href="#equipe" className="nav-link">EQUIPE</a>
-            <a href="#blog" className="nav-link">BLOG</a>
-            <a href="#contato" className="nav-link">CONTATO</a>
+            <a href="#inicio" className="nav-link">{t('nav.home')}</a>
+            <a href="#sobre" className="nav-link">{t('nav.about')}</a>
+            <a href="#projetos" className="nav-link">{t('nav.projects')}</a>
+            <a href="#solucoes" className="nav-link">{t('nav.solutions')}</a>
+            <a href="#equipe" className="nav-link">{t('nav.team')}</a>
+            <a href="#blog" className="nav-link">{t('nav.blog')}</a>
+            <a href="#contato" className="nav-link">{t('nav.contact')}</a>
           </nav>
 
           {/* Menu Mobile */}
@@ -127,13 +92,13 @@ export default function Home() {
         {isMenuOpen && (
           <div className="md:hidden mt-4">
             <nav className="flex flex-col items-center space-y-4 text-lg font-semibold font-dosis uppercase">
-              <a href="#inicio" className="nav-link">INÍCIO</a>
-              <a href="#sobre" className="nav-link">SOBRE</a>
-              <a href="#projetos" className="nav-link">PROJETOS</a>
-              <a href="#solucoes" className="nav-link">SOLUÇÕES</a>
-              <a href="#equipe" className="nav-link">EQUIPE</a>
-              <a href="#blog" className="nav-link">BLOG</a>
-              <a href="#contato" className="nav-link">CONTATO</a>
+              <a href="#inicio" className="nav-link">{t('nav.home')}</a>
+              <a href="#sobre" className="nav-link">{t('nav.about')}</a>
+              <a href="#projetos" className="nav-link">{t('nav.projects')}</a>
+              <a href="#solucoes" className="nav-link">{t('nav.solutions')}</a>
+              <a href="#equipe" className="nav-link">{t('nav.team')}</a>
+              <a href="#blog" className="nav-link">{t('nav.blog')}</a>
+              <a href="#contato" className="nav-link">{t('nav.contact')}</a>
             </nav>
           </div>
         )}
@@ -149,17 +114,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
         <div className="relative z-20">
           <motion.h2 className="text-6xl font-kanit text-indigo-400 glow-text mb-6" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-            Inovação que Transforma
+            {t('hero.title')}
           </motion.h2>
           <motion.p className="text-xl font-lekton text-gray-300 max-w-2xl mx-auto mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.5 }}>
-            Desenvolvemos soluções digitais que potencializam ideias e impulsionam negócios ao infinito.
+            {t('hero.description')}
           </motion.p>
           <motion.div className="flex space-x-4 justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
             <button className="glass-button bg-gradient-to-r from-blue-500 to-purple-600 glow-button px-6 py-3 rounded-full text-white font-dosis uppercase transition transform hover:scale-105">
-              Explore Nossos Projetos
+              {t('hero.exploreButton')}
             </button>
             <button className="glass-button border border-indigo-500 text-indigo-500 px-6 py-3 rounded-full font-dosis uppercase transition transform hover:bg-indigo-600 hover:text-white">
-              Fale Conosco
+              {t('hero.contactButton')}
             </button>
           </motion.div>
         </div>
@@ -322,44 +287,44 @@ export default function Home() {
 
 {/* Nossas Soluções */}
 <section id="solucoes" className="py-24 px-8 bg-gray-800 text-gray-200 min-h-screen flex items-center justify-center">
-  <div className="max-w-7xl mx-auto text-center">
-    <h3 className="text-6xl font-kanit text-indigo-400 mb-12">Soluções ao Cubo</h3>
-    <p className="text-xl font-lekton text-gray-400 mb-16">
-      Criamos produtos inovadores que revolucionam o mercado e impulsionam negócios.
-    </p>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-      {solutions.map((solution, index) => (
-        <motion.div
-          key={index}
-          className="bg-gray-700 p-8 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300 flex flex-col items-center"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 + index * 0.1 }}
-        >
-          {/* Ícones com Animação */}
-          <motion.div
-            className="mb-6"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            <Image
-              src={solution.icon}
-              alt={`${solution.title} Icon`}
-              className="w-20 h-20"
-            />
-          </motion.div>
-          <strong className="text-2xl font-kanit text-indigo-400 mb-4">
-            {solution.title}
-          </strong>
-          <p className="text-lg font-lekton text-gray-400">
-            {solution.description}
+        <div className="max-w-7xl mx-auto text-center">
+          <h3 className="text-6xl font-kanit text-indigo-400 mb-12">{t('solutions.title')}</h3>
+          <p className="text-xl font-lekton text-gray-400 mb-16">
+            {t('solutions.description')}
           </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {solutionsArray.map((solution, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-700 p-8 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300 flex flex-col items-center"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 + index * 0.1 }}
+              >
+                {/* Ícones com Animação */}
+                <motion.div
+                  className="mb-6"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                >
+                  <Image
+                    src={solution.icon}
+                    alt={`${solution.title} Icon`}
+                    className="w-20 h-20"
+                  />
+                </motion.div>
+                <strong className="text-2xl font-kanit text-indigo-400 mb-4">
+                  {solution.title}
+                </strong>
+                <p className="text-lg font-lekton text-gray-400">
+                  {solution.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 {/* Equipe */}
 <section id="equipe" className="py-24 px-8 bg-gray-900 text-gray-200 min-h-screen flex items-center justify-center">
@@ -514,23 +479,31 @@ export default function Home() {
 </section>
 
       {/* Footer */}
-<footer className="py-10 px-8 bg-black bg-opacity-10 backdrop-blur-lg text-gray-400">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-    <div className="mb-6 md:mb-0 text-center md:text-left">
-      <h5 className="text-indigo-400 text-2xl font-bold font-fira">&lt;CreateCubic /&gt;</h5>
-      <p className="mt-2">Criando o futuro, um cubo de cada vez.</p>
-    </div>
-    <div className="space-x-6">
-      <a href="#sobre" className="hover:text-gray-200 transition duration-300">Sobre Nós</a>
-      <a href="#projetos" className="hover:text-gray-200 transition duration-300">Projetos</a>
-      <a href="#blog" className="hover:text-gray-200 transition duration-300">Blog</a>
-      <a href="#contato" className="hover:text-gray-200 transition duration-300">Contato</a>
-    </div>
-  </div>
-  <div className="text-center mt-6">
-    <p>&copy; 2023 CreateCubic. Todos os direitos reservados.</p>
-  </div>
-</footer>
+      <footer className="py-10 px-8 bg-black bg-opacity-10 backdrop-blur-lg text-gray-400">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <h5 className="text-indigo-400 text-2xl font-bold font-fira">&lt;CreateCubic /&gt;</h5>
+            <p className="mt-2">{t('footer.slogan')}</p>
+          </div>
+          <div className="space-x-6">
+            <a href="#sobre" className="hover:text-gray-200 transition duration-300">{t('nav.about')}</a>
+            <a href="#projetos" className="hover:text-gray-200 transition duration-300">{t('nav.projects')}</a>
+            <a href="#blog" className="hover:text-gray-200 transition duration-300">{t('nav.blog')}</a>
+            <a href="#contato" className="hover:text-gray-200 transition duration-300">{t('nav.contact')}</a>
+          </div>
+        </div>
+        <div className="text-center mt-6">
+          <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
+        </div>
+      </footer>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }
