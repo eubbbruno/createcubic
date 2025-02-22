@@ -1,6 +1,16 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+// Defina seus horários disponíveis aqui (exemplo):
+const availableTimes = [
+  '08:00',
+  '09:00',
+  '10:00',
+  '11:00',
+  '13:00',
+  '14:00',
+];
+
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Nome é obrigatório'),
   email: Yup.string().email('Email inválido').required('Email é obrigatório'),
@@ -9,7 +19,7 @@ const validationSchema = Yup.object().shape({
   time: Yup.string().oneOf(availableTimes, 'Horário indisponível').required('Horário é obrigatório'),
 });
 
-const Schedule = () => {
+export default function Schedule() {
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -20,7 +30,8 @@ const Schedule = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-      // Enviar dados para a API
+      // Aqui você envia para a API ou faz o que precisar
+      console.log(values);
     },
   });
 
@@ -76,4 +87,4 @@ const Schedule = () => {
       <button type="submit">Agendar</button>
     </form>
   );
-};
+}
