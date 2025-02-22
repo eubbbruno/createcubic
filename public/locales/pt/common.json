@@ -1,58 +1,17 @@
 {
-    "pageTitle": "CreateCubic - Agência de Lançamentos",
-    "pageDescription": "Bem-vindo à CreateCubic, sua agência de lançamentos.",
-    "logoAlt": "CreateCubic Logo",
-    "nav": {
-      "home": "INÍCIO",
-      "about": "SOBRE",
-      "projects": "PROJETOS",
-      "solutions": "SOLUÇÕES",
-      "team": "EQUIPE",
-      "blog": "BLOG",
-      "contact": "CONTATO"
-    },
-    "hero": {
-      "title": "Inovação que Transforma",
-      "description": "Desenvolvemos soluções digitais que potencializam ideias e impulsionam negócios ao infinito.",
-      "exploreButton": "Explore Nossos Projetos",
-      "contactButton": "Fale Conosco"
-    },
-    "solutions": [
-      {
-        "title": "Websites & E-commerces",
-        "description": "Criamos plataformas personalizadas para negócios online."
-      },
-      {
-        "title": "Dropshipping Automatizado",
-        "description": "Automatização completa para seu negócio de dropshipping."
-      },
-      {
-        "title": "Gestão de Tráfego Pago",
-        "description": "Otimização de campanhas para resultados excepcionais."
-      },
-      {
-        "title": "Apps Mobile",
-        "description": "Desenvolvimento de aplicativos móveis inovadores."
-      },
-      {
-        "title": "SaaS Personalizado",
-        "description": "Soluções SaaS adaptadas às suas necessidades."
-      },
-      {
-        "title": "Conteúdo Digital",
-        "description": "Criação e gestão de conteúdo digital estratégico."
-      },
-      {
-        "title": "Marketing de Afiliados",
-        "description": "Estratégias eficazes de marketing de afiliados."
-      },
-      {
-        "title": "Blockchain & Cripto",
-        "description": "Projetos baseados em blockchain e criptomoedas."
-      }
-    ],
-    "footer": {
-      "slogan": "Criando o futuro, um cubo de cada vez.",
-      "copyright": "© {{year}} CreateCubic. Todos os direitos reservados."
-    }
+  "nav": {
+    "home": "INÍCIO",
+    "about": "SOBRE",
+    "projects": "PROJETOS",
+    "solutions": "SOLUÇÕES",
+    "team": "EQUIPE",
+    "blog": "BLOG",
+    "contact": "CONTATO"
+  },
+  "hero": {
+    "title": "Inovação que Transforma",
+    "description": "Desenvolvemos soluções digitais que potencializam ideias e impulsionam negócios ao infinito.",
+    "exploreButton": "Explore Nossos Projetos",
+    "contactButton": "Fale Conosco"
   }
+}

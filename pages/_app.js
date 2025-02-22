@@ -1,5 +1,5 @@
-// pages/_app.js
 import '../styles/globals.css';
+import { appWithTranslation } from 'next-i18next';
 import CustomCursor from '../components/CustomCursor';
 import { ChakraProvider } from '@chakra-ui/react';
 
@@ -12,4 +12,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
