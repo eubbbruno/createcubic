@@ -13,5 +13,32 @@
     "description": "Desenvolvemos soluções digitais que potencializam ideias e impulsionam negócios ao infinito.",
     "exploreButton": "Explore Nossos Projetos",
     "contactButton": "Fale Conosco"
+  },
+  "solutions": {
+    "title": "Nossas Soluções",
+    "description": "Transformamos ideias em realidade com nossas soluções inovadoras",
+    "items": [
+      {
+        "title": "Desenvolvimento Web",
+        "description": "Criamos websites e aplicações web modernas e responsivas",
+        "icon": "/icons/web.svg"
+      },
+      {
+        "title": "Apps Mobile",
+        "description": "Desenvolvemos aplicativos nativos e multiplataforma",
+        "icon": "/icons/mobile.svg"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Design de interfaces intuitivas e experiências memoráveis",
+        "icon": "/icons/design.svg"
+      },
+      {
+        "title": "Consultoria Tech",
+        "description": "Orientação estratégica para sua transformação digital",
+        "icon": "/icons/consulting.svg"
+      }
+    ]
   }
 }
+

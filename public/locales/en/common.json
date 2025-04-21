@@ -13,5 +13,32 @@
     "description": "We develop digital solutions that empower ideas and propel businesses to infinity.",
     "exploreButton": "Explore Our Projects",
     "contactButton": "Contact Us"
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "description": "Turning ideas into reality with our innovative solutions",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "We create modern and responsive websites and web applications",
+        "icon": "/icons/web.svg"
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "We develop native and cross-platform applications",
+        "icon": "/icons/mobile.svg"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Design of intuitive interfaces and memorable experiences",
+        "icon": "/icons/design.svg"
+      },
+      {
+        "title": "Tech Consulting",
+        "description": "Strategic guidance for your digital transformation",
+        "icon": "/icons/consulting.svg"
+      }
+    ]
   }
 }
+

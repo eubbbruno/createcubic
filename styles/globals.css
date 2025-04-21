@@ -5,13 +5,13 @@
 
 /* Fontes Personalizadas */
 .font-lekton {
-  font-family: 'Lekton', sans-serif;
+  font-family: "Lekton", sans-serif;
 }
 .font-dosis {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
 }
 .font-kanit {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 /* Estilos para o Cursor Personalizado */
@@ -42,12 +42,24 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.front  { transform: translateZ(10px); }
-.back   { transform: rotateY(180deg) translateZ(10px); }
-.left   { transform: rotateY(-90deg) translateZ(10px); }
-.right  { transform: rotateY(90deg) translateZ(10px); }
-.top    { transform: rotateX(90deg) translateZ(10px); }
-.bottom { transform: rotateX(-90deg) translateZ(10px); }
+.front {
+  transform: translateZ(10px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(10px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(10px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(10px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(10px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(10px);
+}
 
 @keyframes rotate {
   from {
@@ -68,7 +80,7 @@
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px; /* Posição logo abaixo do texto */
@@ -106,15 +118,15 @@
 
 /* Fontes e Tamanhos Globais */
 h2 {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 p {
-  font-family: 'Lekton', sans-serif;
+  font-family: "Lekton", sans-serif;
 }
 
 button {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
 }
 
 /* Alinhamento da Descrição */
@@ -126,6 +138,9 @@ button {
 /* Forçar a exibição do cursor padrão */
 body {
   cursor: default !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 @keyframes marquee {
@@ -142,3 +157,235 @@ body {
   animation: marquee 15s linear infinite;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Hero Section */
+  #inicio {
+    padding: 1rem;
+  }
+
+  #inicio h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  #inicio .glass-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Solutions Section */
+  #solucoes {
+    padding: 2rem 1rem;
+  }
+
+  #solucoes h3 {
+    font-size: 2.5rem;
+  }
+
+  #solucoes p {
+    font-size: 1rem;
+  }
+
+  #solucoes .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  #solucoes .bg-gray-700 {
+    padding: 1.5rem;
+  }
+
+  #solucoes img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* About Section */
+  #sobre {
+    padding: 2rem 1rem;
+  }
+
+  #sobre .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #sobre h3 {
+    font-size: 2.5rem;
+  }
+
+  #sobre p {
+    font-size: 1rem;
+  }
+
+  #sobre .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  #sobre .text-4xl {
+    font-size: 2rem;
+  }
+
+  #sobre .aspect-square {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Projects Section */
+  #projetos {
+    padding: 2rem 1rem;
+  }
+
+  #projetos h3 {
+    font-size: 2.5rem;
+  }
+
+  #projetos p {
+    font-size: 1rem;
+  }
+
+  #projetos .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Team Section */
+  #equipe {
+    padding: 2rem 1rem;
+  }
+
+  #equipe h3 {
+    font-size: 2.5rem;
+  }
+
+  #equipe p {
+    font-size: 1rem;
+  }
+
+  #equipe .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Blog Section */
+  #blog {
+    padding: 2rem 1rem;
+  }
+
+  #blog h3 {
+    font-size: 2.5rem;
+  }
+
+  #blog p {
+    font-size: 1rem;
+  }
+
+  #blog .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Contact Section */
+  #contato {
+    padding: 2rem 1rem;
+  }
+
+  #contato .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #contato h3 {
+    font-size: 2.5rem;
+  }
+
+  #contato p {
+    font-size: 1rem;
+  }
+
+  #contato input,
+  #contato textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  #contato button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  footer .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .space-x-6 {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Ajuste do cursor personalizado para mobile */
+  .custom-cursor {
+    display: none; /* Desativa o cursor customizado em mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas muito pequenas */
+  #inicio h2 {
+    font-size: 2rem;
+  }
+
+  #inicio p {
+    font-size: 0.9rem;
+  }
+
+  #solucoes h3,
+  #sobre h3,
+  #projetos h3,
+  #equipe h3,
+  #blog h3,
+  #contato h3 {
+    font-size: 2rem;
+  }
+
+  #sobre .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  #solucoes img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  #contato input,
+  #contato textarea {
+    padding: 0.5rem;
+  }
+
+  #contato button {
+    padding: 0.5rem 1rem;
+  }
+}
